@@ -676,7 +676,6 @@ function init(){
   refreshStats();
   document.getElementById('loader').style.display='none';
   showScreen('menu');
-  if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 if(document.readyState==='complete'){init();}else{window.addEventListener('load',init);}
 document.addEventListener('touchstart',()=>{if(audioCtx?.state==='suspended')audioCtx.resume();},{once:true});
